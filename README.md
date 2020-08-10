@@ -8,7 +8,7 @@ Due to some small bugs from a typo and MIME type wasn't set
 Add this lines to your application's Gemfile:
 ```ruby
 ...
-gem 'shrine', '~> 2.11'
+gem 'shrine', '>= 3.0.0.beta3', '< 4'
 gem 'shrine-storage-azureblob'
 ...
 ```

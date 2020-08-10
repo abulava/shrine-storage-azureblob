@@ -42,7 +42,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'rubocop'
 
-  spec.add_dependency "shrine"
+  spec.add_dependency 'shrine', '>= 3.0.0.beta3', '< 4'
   spec.add_dependency 'nokogiri', '>= 1.10.9'
   spec.add_dependency 'azure-storage-blob', '~> 2.0.0'
 end
