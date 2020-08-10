@@ -53,6 +53,12 @@ class Shrine
         GC.start
         _blob, content = @client.get_blob(container_name, id)
         StringIO.new(content)
+      rescue Azure::Core::Http::HTTPError => e
+        if e.status_code == 404
+          raise Shrine::FileNotFound, "file #{id.inspect} not found on storage"
+        else
+          raise
+        end
       end
 
       def put(io, id, **_options)
